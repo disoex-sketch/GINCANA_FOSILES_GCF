@@ -25,7 +25,8 @@ const datosFosiles = {
     opciones: ["Annularia", "Stigmaria", "Lepidodendron", "Calamites"],
     correcta: 3,
     resena: "¡El bambú gigante del pasado! Lo que ves en la roca no son cañas normales, sino los tallos fosilizados de unos abuelos gigantes de las actuales 'colas de caballo'. Hace más de 300 millones de años crecían en las zonas húmedas de León y Asturias formando auténticos bosques de tubos huecos. Sus troncos tenían anillos y rallas verticales, como si fueran cañaverales gigantes de hasta cuatro pisos de altura. Al romperse y caer al barro espeso sin oxígeno, sus troncos se transformaron lentamente con el paso del tiempo en el carbón que conocemos."
-"como": {
+  },
+    "como": {
     titulo: "LA GINCANA DE LA GRAN CORTA",
     imagen: "img/como.JPG",
     pregunta: "Una hoja cae al barro. ¿Qué tendría que ocurrir para que millones de años después pudiéramos encontrar su huella en una roca?",
@@ -150,7 +151,7 @@ function cargarFosil(clave) {
   };
 
   if (mapaNumerico[clave]) clave = mapaNumerico[clave];
-  if (!datosFosiles[clave]) clave = "alethopteris";
+  if (!datosFosiles[clave]) clave = "que";
   
   const estado = obtenerEstado();
 
