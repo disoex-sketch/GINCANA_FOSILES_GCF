@@ -1,0 +1,181 @@
+:root {
+  --bg-color: #f4f1ea;
+  --card-bg: #ffffff;
+  --primary: #2c3e50;
+  --accent: #d35400;
+  --text: #333333;
+  --border: #cccccc;
+  --success: #28a745;
+  --danger: #dc3545;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* Elimina el destello azul al tocar en móviles */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text);
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px; /* Tamaño ideal para pantalla de smartphone */
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  color: var(--primary);
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Marcador fijo y compacto */
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--primary);
+  color: white;
+  padding: 10px 8px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+}
+
+.score-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+.btn-reset {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+h2 {
+  text-align: center;
+  color: var(--accent);
+  font-size: 1.15rem;
+  margin: 10px 0;
+}
+
+/* Visor de la imagen */
+.image-box img, #img-fosil {
+    width: 100%;
+    max-height: 40vh; 
+    object-fit: contain; 
+    border-radius: 8px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.question {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary);
+  line-height: 1.35;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.btn-opt {
+  background: #f8f9fa;
+  border: 2px solid var(--border);
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.btn-opt:active:not([disabled]) {
+  background: #e2e6ea;
+}
+
+.feedback {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: none;
+}
+
+.feedback.correct {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.review-card {
+  border-left: 4px solid var(--accent);
+  background: #fafafa;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 0 8px 8px 0;
+  display: none;
+}
+
+.review-card h3 {
+  margin: 0 0 6px 0;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.review-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
